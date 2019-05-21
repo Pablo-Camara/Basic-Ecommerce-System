@@ -1,0 +1,118 @@
+/*------------------------------------------------------------------
+  	[Form Control]
+------------------------------------------------------------------*/
+
+.form-control {
+	height: 50px;
+    @include font($size: 14px, $weight: 400);
+    color: #ffffff;
+    @include placeholder(#ffffff);
+    background: $color-sky-light;
+    border: none;
+    box-shadow: none;
+    @include border-radius(0);
+    padding-left: 15px;
+
+    &:focus {
+    	color: #ffffff;
+        @include placeholder(#ffffff);
+        box-shadow: none;
+    }
+}
+
+
+/*------------------------------------------------------------------
+    [Full Screen Carousel]
+------------------------------------------------------------------*/
+
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*------------------------------------------------------------------
+    [Carousel]
+------------------------------------------------------------------*/
+
+.carousel-indicators {
+    left: auto;
+    width: auto;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.carousel-centered {
+    @include position(absolute, $top: 50%);
+    @include translate3d(0,-50%,0);
+
+    p.white {
+        color: #ffffff;
+    }
+
+    p.bigger {
+        font-size: 20px;
+    }
+}
+
+.carousel-title {
+    @include font($size: 80px, $weight: 700);
+    color: #ffffff;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.carousel-title.medium {
+    @include font($size: 50px, $weight: 700);
+}
+
+@media (max-width: $screen-sm-min) {
+    .carousel-title {
+        @include font($size: 28px);
+    }
+
+    .carousel-title.medium {
+        @include font($size: 30px);
+    }
+}
+
+.carousel-control {
+    background-image: none !important;
+    width: 5%;
+}
+
+.carousel-control .glyphicon-chevron-left {
+    color: #ffffff;
+    left: 40px;
+}
+
+.carousel-control .glyphicon-chevron-right {
+    color: #ffffff;
+    right: 40px;
+}
+
+@media(max-width: 900px){
+    .carousel-control .glyphicon-chevron-left {
+        color: #ffffff;
+        left: 20px;
+    }
+
+    .carousel-control .glyphicon-chevron-right {
+        color: #ffffff;
+        right: 20px;
+    }
+}
+
+
+@media(max-width: 800px){
+    .carousel-control .glyphicon-chevron-left {
+        color: #ffffff;
+        left: 10px;
+    }
+
+    .carousel-control .glyphicon-chevron-right {
+        color: #ffffff;
+        right: 10px;
+    }
+}

@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------
+  	[Button]
+------------------------------------------------------------------*/
+
+.btn-theme {
+	@include button();
+}
+
+.btn-white-brd {
+	@include button-color($color-white, $color-heading, transparent, $color-white, 1px, rgba(255,255,255,.3), transparent);
+}
+
+.btn-default-bg {
+	@include button-color(#EEEEEE, #FFFFFF, $color-base, $color-base, 0, transparent, transparent);
+}
+
+.btn-base-bg {
+	@include button-color($color-white, $color-white, $color-base, #386303, 0, transparent, transparent);
+}
+
+.btn-theme-sm {
+	@include button-size(13px, 600, 15px 30px);
+
+	&.active_blank  {
+		background: #ffffff;
+		color: #515769;
+		border-color: transparent;
+	}
+}
